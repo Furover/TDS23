@@ -69,5 +69,11 @@ select PROFISSAO 'Profissão', COUNT(*) 'Ocorrências' from TabelaGrande
 where profissao is not null
 group by PROFISSAO
 
+--Ocorrências por mês
+
+select mes_estatistica 'Mês', COUNT(*) 'Ocorrências' from TabelaGrande
+group by MES_ESTATISTICA
+order by COUNT(*) desc
+
 
 
