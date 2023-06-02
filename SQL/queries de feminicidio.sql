@@ -57,3 +57,17 @@ from (
     else 'QUE?' end as range
   from TabelaGrande) t
 group by t.range
+
+--Ocorrências de pessoas trans
+
+select * from tabelagrande
+where SEXO_PESSOA != 'feminino'
+
+--Ocorrências por profissão
+
+select PROFISSAO 'Profissão', COUNT(*) 'Ocorrências' from TabelaGrande
+where profissao is not null
+group by PROFISSAO
+
+
+
