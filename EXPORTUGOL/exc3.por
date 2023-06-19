@@ -27,7 +27,7 @@ programa
 		
 		se(cq >= 1000)
 		{
-			escreva("O valor do quadrado do terceiro número excedeu ou equivaleu 1000, sendo o seu valor: "+cq)
+			escreva("O valor do quadrado do terceiro número excedeu ou equivaleu 1000, sendo o seu valor: "+cq+"\ne o valor orinal era: "+c)
 		}
 		senao
 		{
@@ -40,7 +40,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 655; 
+ * @POSICAO-CURSOR = 690; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
