@@ -1,23 +1,23 @@
 programa
 {
-	inclua biblioteca Matematica
 	
 	funcao inicio()
 	{
-		inteiro peso = 0
-		inteiro excedente = 0
-		inteiro multa = 0
-		escreva("Digite o peso do tomate em kilogramas:")
-		leia(peso)
-		excedente = peso - 50
-		multa = excedente * 4
-		se(peso > 50)
+		real b = 0.00
+		real h = 0.00	
+		real a = 0.00
+		escreva("Digite o valor da base do triângulo:")
+		leia(b)
+		escreva("Digite o valor da altura do triângulo:")
+		leia(h)
+		se(b > 0 e h > 0)
 		{
-			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+			a = b * h / 2
+			escreva("O valor da área desse triângulo é: "+a)
 		}
 		senao
 		{
-			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+			escreva("Digite valores válidos para a altura e base, eles devem ser maior que 0.")
 		}
 	}
 }
@@ -26,7 +26,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 434; 
+ * @POSICAO-CURSOR = 295; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

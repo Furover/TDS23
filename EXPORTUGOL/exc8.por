@@ -1,23 +1,19 @@
 programa
 {
-	inclua biblioteca Matematica
 	
 	funcao inicio()
 	{
-		inteiro peso = 0
-		inteiro excedente = 0
-		inteiro multa = 0
-		escreva("Digite o peso do tomate em kilogramas:")
-		leia(peso)
-		excedente = peso - 50
-		multa = excedente * 4
-		se(peso > 50)
+		inteiro n = 0
+		escreva("Digite o número acima de 100:")
+		leia(n)
+		se(n > 100)
 		{
-			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+			escreva(n)
 		}
 		senao
 		{
-			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+			n = 0
+			escreva(n)
 		}
 	}
 }
@@ -26,7 +22,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 434; 
+ * @POSICAO-CURSOR = 132; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
