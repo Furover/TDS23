@@ -31,7 +31,7 @@ programa
 		}
 		senao
 		{
-			escreva("O valor do terceiro não atingiu 1000, o valor de todos os números digitados foi:\n"+a+"\n"+b+"\n"+c+"\n"+d+"\nE os seus quadrados foram:\n"+aq+"\n"+bq+"\n"+cq+"\n"+dq)
+			escreva("O valor do terceiro ao quadrado não atingiu 1000, o valor de todos os números digitados foi:\n"+a+"\n"+b+"\n"+c+"\n"+d+"\nE os seus quadrados foram:\n"+aq+"\n"+bq+"\n"+cq+"\n"+dq)
 		}
 	}
 }
@@ -40,7 +40,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 690; 
+ * @POSICAO-CURSOR = 751; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
