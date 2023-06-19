@@ -18,9 +18,13 @@ programa
 		{
 			escreva("Nível de poluição acima do limite! Todas as indústrias devem suspender suas atividades!")
 		}
-		senao
+		senao se(p < 0.3 e p >= 0)
 		{
 			escreva("Nível de poluição aceitável, nenhuma ação necessária.")
+		}
+		senao
+		{
+			escreva("Digite um índice válido.")
 		}
 	}
 }
@@ -29,7 +33,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 584; 
+ * @POSICAO-CURSOR = 660; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
