@@ -10,15 +10,20 @@ programa
 		leia(c)
 		escreva("Digite o número de horas trabalhadas:")
 		leia(n)
+		excesso = n - 50
 		se(n > 50)
 		{
-			excesso = n - 50
 			n = n - excesso
 			escreva("O operário "+c+" excedeu "+excesso+"h, e receberá "+(n * 10 + excesso * 20)+" R$ de salário neste mês, sendo "+excesso * 20+" R$ de salário excedente.")
 		}
+		senao se(n <= 50 e n >= 0)
+		{
+			excesso = 0
+			escreva("O operário "+c+" não teve hora extra, e receberá "+(n * 10 + excesso * 20)+" R$ de salário neste mês.")
+		}
 		senao
 		{
-			escreva("O operário "+c+" não teve hora extra, e receberá "+(n * 10 + excesso * 20)+" R$ de salário neste mês.")
+			escreva("Digite um número válido de horas.")
 		}
 	}
 }
@@ -27,7 +32,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 43; 
+ * @POSICAO-CURSOR = 643; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
