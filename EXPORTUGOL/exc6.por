@@ -26,10 +26,6 @@ programa
 		{
 			escreva("O nadador é da categoria Adultos.")
 		}
-		senao se(i < 5 e i >= 0)
-		{
-			escreva("O nadador não está com a idade apropriada para ser classificado.")
-		}
 		senao
 		{
 			escreva("Digite uma idade válida.")
@@ -41,7 +37,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 169; 
+ * @POSICAO-CURSOR = 515; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
