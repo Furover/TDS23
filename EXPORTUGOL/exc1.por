@@ -15,9 +15,15 @@ programa
 		{
 			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
 		}
+		senao se (peso <= 50 e peso >= 0)
+		{
+			excedente = 0
+			multa = 0
+			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+		}
 		senao
 		{
-			escreva("Você excedeu "+excedente+"kg do limite, e pagará R$ "+multa+" de multa.")
+			escreva("Digite números válidos.")
 		}
 	}
 }
@@ -26,7 +32,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 434; 
+ * @POSICAO-CURSOR = 369; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
