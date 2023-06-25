@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.math.*;
 
-public class ex3l1 {
+public class exc3l1 {
 
 	public static void main(String[] args) {
 		Scanner gRead = new Scanner(System.in);
