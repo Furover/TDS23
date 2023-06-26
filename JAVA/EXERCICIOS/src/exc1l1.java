@@ -9,7 +9,7 @@ public class exc1l1 {
 		int timeS = timeRead.nextInt();
 		int timeM = timeS / 60;
 		int timeH = timeM / 60;
-		System.out.printf("\nThe duration of the event in hours is %dh and in minutes is %dmin and in seconds %ds",timeH,timeM,timeS);
+		System.out.printf("\nThe duration of the event in hours is %dh, in minutes is %dmin and in seconds %ds",timeH,timeM,timeS);
 
 		
 	}
