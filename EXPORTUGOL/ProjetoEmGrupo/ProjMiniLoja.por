@@ -1,6 +1,7 @@
 programa
-{ 
+{ 	inclua biblioteca Matematica
 	inclua biblioteca Util
+	
   	inteiro estoque [] = {10,10,10,10,10,10,10,10,10,10} 
   	cadeia codigo[] = {"GRP0X-01","GRP0X-02","GRP0X-03","GRP0X-04","GRP0X-05","GRP0X-06","GRP0X-07","GRP0X-08","GRP0X-09","GRP0X-10"} 
      cadeia produto[] = {"BONÉ             ","CALÇA             ","BERMUDA         ","BATA             ","CAMISA             ","SAIA RODADA        ","SAIA STYLE       ","MACACÃO AFRO    ","CAMISETA TEMATICA","CALÇA SOCIAL AFRO"} 
@@ -91,8 +92,35 @@ programa
                          }
                          se(codigo[y] != cod e y == 9){
                          	y = 0
+                         	se(cod == "GRP0X-01"){
+                         pula(1)
+                         linhas(68)
+                          escreva("\nCodigo:   ",codigo[y],"    Produto:   ",produto[y],"    Estoque:   ",estoque[y], "\n")
+                         linhas(68)
+                         pula(1)
+                          escreva ("Qual a quantidade que deseja comprar?: ")
+                          leia(qntd)
+                          	se((qntd + carrinho[y]) > estoque[y]){
+                          		escreva("\n\nVocê está excedendo o estoque! Escreva um número válido!!!\n\n")
+                          		
+                          		
+                          	}
+                          	senao se(qntd + carrinho[y] <= 0){
+                          		limpa()
+                          		escreva("\n\nNúmero inválido, ou você tirou esse item do carrinho.\n\n")
+                          		telaprimaria()
+                          	}
+                          senao{
+                          
+                          carrinho[y] += qntd
+                          escreva ("\n\nQuer continuar sua compra?:\n")
+                          leia(conti)
+                          passouseporaq = verdadeiro
+                          }
+                         }
+                         senao se(bugestranho == falso){
                          	escreva ("Desculpe, mas não consegui encontrar seu produto, digite novamente:\n")
-                         	leia(cod)
+                         	leia(cod)}
                          	
                          	
                          	
@@ -140,14 +168,14 @@ programa
   			linhas(84)
   			
   			cadeia carrinhocerto
-  			escreva("\nO valor total dos produtos: ",(valorTotal * 1.09),", sendo ",(valorTotal * 0.09)," de imposto.")
+  			escreva("\nO valor total dos produtos: ",Matematica.arredondar((valorTotal * 1.09), 2),", sendo ",Matematica.arredondar((valorTotal * 0.09), 2)," de imposto.")
   			pula(2)
   			escreva("\nDeseja confirmar a compra?\n")
   			leia(carrinhocerto)
   			se(carrinhocerto == "S" ou carrinhocerto == "s" ou carrinhocerto == "Sim" ou carrinhocerto == "sim"){
   				inteiro escolhagamer = 0
-  				escreva("\n\nOPÇÕES DE PAGAMENTO\n\n1 - A VISTA COM 10% DESCONTO: ",(valorTotal * 0.9))
-  				escreva("\n2 - NO CARTÃO COM 10% DE JUROS: ",(valorTotal * 1.10))
+  				escreva("\n\nOPÇÕES DE PAGAMENTO\n\n1 - A VISTA COM 10% DESCONTO: ",Matematica.arredondar((valorTotal * 0.9), 2))
+  				escreva("\n2 - NO CARTÃO COM 10% DE JUROS: ",Matematica.arredondar((valorTotal * 1.10), 2))
   				real parcela1 = ((valorTotal / 2) * 1.15)
   				real parcela2 = parcela1 * 1.15
   				escreva("\n3 - NO CARTÃO EM DUAS VEZES COM 15% DE JUROS\n\n")
@@ -155,7 +183,7 @@ programa
   				leia(escolhagamer)
   				se(escolhagamer == 1){
   					cadeia RESPOSTAGAMER
-  					escreva("\nValor total com 10% de desconto: ",(valorTotal * 0.9))
+  					escreva("\nValor total com 10% de desconto: ",Matematica.arredondar((valorTotal * 0.9), 2))
   					escreva("\nConfirmar?\n")
   					leia(RESPOSTAGAMER)
   					se(RESPOSTAGAMER == "S" ou RESPOSTAGAMER == "s"){
@@ -206,7 +234,7 @@ programa
   				}
   						pula(1)
   						valorTotal *= 0.9
-                         	escreva("\nValor total + imposto: ",(valorTotal * 1.09),"\n\nImposto: ",(valorTotal * 0.09),"\n")
+                         	escreva("\nValor total + imposto: ",Matematica.arredondar((valorTotal * 1.09), 2),"\n\nImposto: ",Matematica.arredondar((valorTotal * 0.09), 2),"\n")
 						
 						linhas(100)
 						pula(7)
@@ -222,7 +250,7 @@ programa
   				}
   				se(escolhagamer == 2){
   					cadeia RESPOSTAGAMER
-  					escreva("\nValor total com 10% de juros: ",(valorTotal * 1.1))
+  					escreva("\nValor total com 10% de juros: ",Matematica.arredondar((valorTotal * 1.1), 2))
   					escreva("\nConfirmar?\n")
   					leia(RESPOSTAGAMER)
   					se(RESPOSTAGAMER == "S" ou RESPOSTAGAMER == "s"){
@@ -272,7 +300,7 @@ programa
   					}
   				}
   						valorTotal *= 1.1
-                         	escreva("\nValor total + imposto: ",(valorTotal * 1.09),"\n\nImposto: ",(valorTotal * 0.09),"\n")
+                         	escreva("\nValor total + imposto: ",Matematica.arredondar((valorTotal * 1.09), 2),"\n\nImposto: ",Matematica.arredondar((valorTotal * 0.09), 2),"\n")
 						linhas(100)
 						pula(7)
                          	
@@ -286,7 +314,7 @@ programa
   				}
   				se(escolhagamer == 3){
   					cadeia RESPOSTAGAMER
-  					escreva("\nParcela 1: ",parcela1,"\nParcela 2: ",parcela2,"\nValor total: ",parcela1 + parcela2)
+  					escreva("\nParcela 1: ",Matematica.arredondar(parcela1, 2),"\nParcela 2: ",Matematica.arredondar(parcela2, 2),"\nValor total: ",Matematica.arredondar((parcela1 + parcela2), 2))
   					escreva("\nConfirmar?\n")
   					leia(RESPOSTAGAMER)
   					se(RESPOSTAGAMER == "S" ou RESPOSTAGAMER == "s"){
@@ -335,7 +363,7 @@ programa
                          	
   					}
   				}
-                         	escreva("\nValor total + imposto: ",((parcela1 + parcela2) * 1.09),"\n\nImposto: ",((parcela1 + parcela2) * 0.09),"\n")
+                         	escreva("\nValor total + imposto: ",Matematica.arredondar(((parcela1 + parcela2) * 1.09), 2),"\n\nImposto: ",Matematica.arredondar(((parcela1 + parcela2) * 0.09), 2),"\n")
                          	
 						linhas(100)
 						pula(7)
@@ -373,6 +401,47 @@ programa
 	                 	 
 	                         se(codigo[y] == cod2) 
 	                         {
+	                         	se(carrinho[y] == 0){
+	                         		escreva("\nHmm... parece que você não tem esse item em seu carrinho\nDigite o código novamente:")
+	                         		leia(cod2)
+	                         	}
+	                         	senao{
+	                         
+	                         pula(1)
+	                         linhas(68)
+	                          escreva("\nCodigo:   ",codigo[y],"    Produto:   ",produto[y],"    Estoque:   ",estoque[y],"    Carrinho:   ",carrinho[y], "\n")
+	                         linhas(68)
+	                         pula(1)
+	                          escreva ("Qual a quantidade que deseja remover?: ")
+	                          leia(qntd2)
+	                          qntd2 = -qntd2
+	                          	se(qntd2 >= 0){
+	                          		escreva("\n\nOcorreu um erro.\n\n")
+	                          		carrinhos()
+	                          		
+	                          		
+	                          	}
+	                          	senao se(qntd2 + carrinho[y] == 0){
+	                          		limpa()
+	                          		carrinho[y] += qntd2
+	                          		escreva("\n\nVocê tirou completamente esse item do carrinho.\n\n")
+	                          		escreva ("\n\nDeseja voltar ao carrinho??:\n")
+	                          		leia(conti)
+	                          	}
+	                          	senao se(qntd2 + carrinho[y] < 0){
+	                          		escreva("\n\nOcorreu um erro.\n\n")
+	                          		carrinhos()
+	                          	}
+	                          senao{
+	                          passouseporaq = verdadeiro
+	                          carrinho[y] += qntd2
+	                          escreva ("\n\nDeseja voltar ao seu carrinho??:\n")
+	                          leia(conti)
+	                          }
+	                         }}
+	                         se(codigo[y] != cod2 e y == 9){
+                         	y = 0
+                         	se(cod2 == "GRP0X-01"){
 	                         
 	                         pula(1)
 	                         linhas(68)
@@ -406,14 +475,13 @@ programa
 	                          leia(conti)
 	                          }
 	                         }
-	                         se(codigo[y] != cod2 e y == 9){
-	                         	y = 0
-	                         	escreva ("Desculpe, mas não consegui encontrar seu produto, digite novamente:\n")
-	                         	leia(cod2)
-	                         	
-	                         	
-	                         	
-	                         }
+                         senao se(bugestranho == falso){
+                         	escreva ("Desculpe, mas não consegui encontrar seu produto, digite novamente:\n")
+                         	leia(cod2)}
+                         	
+                         	
+                         	
+                         }
 	                         se (conti == "S" ou conti == "s" ou conti == "sim" ou conti == "Sim"){
 	                         	inteiro valorTotal2 = 0
 	                         	para(inteiro r = 0; r <= 9; r++){
@@ -490,7 +558,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 20541; 
+ * @POSICAO-CURSOR = 19913; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
