@@ -1,5 +1,7 @@
 programa
-{ 	inclua biblioteca Matematica
+{ 
+	//Integrantes - Gustavo 09, Joao Melara 12, Joao Martinez 15, Mateus Nezzi 19, Vinícius 23
+	inclua biblioteca Matematica
 	inclua biblioteca Util
 	
   	inteiro estoque [] = {10,10,10,10,10,10,10,10,10,10} 
@@ -558,7 +560,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 19913; 
+ * @POSICAO-CURSOR = 87; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
