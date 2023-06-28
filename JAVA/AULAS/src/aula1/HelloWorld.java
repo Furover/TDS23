@@ -1,3 +1,4 @@
+package aula1;
 import java.util.Scanner;
 import java.math.*;
 
