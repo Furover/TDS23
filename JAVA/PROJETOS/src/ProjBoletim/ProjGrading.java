@@ -8,6 +8,8 @@ import ProjBoletim.Space;
 public class ProjGrading {
 
 	public static int SelStudent = 0;
+	public static boolean Graded1[] = new boolean[27];
+	public static boolean Graded2[] = new boolean[27];
 	public static boolean Graded[] = new boolean[27];
 	public static boolean Abscented[] = new boolean[27];
 	public static String Code[] = {"3278", "3277", "3317", "3274", "3269", "3316", "3272", "3319", "3266", "3332", "3330", "3262", "3275", "3280", "3337", "3263", "3281", "3339", "3264", "3340", "3321", "3276", "3318", "3268", "3282", "3343", "3258"};
@@ -60,36 +62,109 @@ public class ProjGrading {
 	
 	
 	public static void changeValuesAbs() {
+		int wAbs = 0;
 		Scanner amntAbscence = new Scanner(System.in);
 		System.out.println("\nHow many times has this student been abscent?");
-		Abscence[SelStudent] = amntAbscence.nextInt();
+		wAbs = amntAbscence.nextInt();
 		if(Abscence[SelStudent] < 0) {
 			System.out.println("\nError, type again\n");
 			changeValuesAbs();
 		}
 		else if(Abscence[SelStudent] >= 40) {
+			Abscence[SelStudent] = wAbs;
 			Status[SelStudent] = "REC";
+			Abscented[SelStudent] = true;
 			Jump.main(35);
 			search();
 		}
-		else {search();}
+		else {
+			Abscence[SelStudent] = wAbs;
+			Abscented[SelStudent] = true;
+			search();
+		}
 	}
 	
 	public static void changeValuesGra1() {
+		double wGrade1 = 0.00;
 		Scanner grade = new Scanner(System.in);
 		System.out.println("\n\nWhat was his first grade?");
-		Score1[SelStudent] = grade.nextInt();
+		wGrade1 = grade.nextInt();
+		if(wGrade1 < 0.00 || wGrade1 > 10.00) {
+			System.out.println("\n\nError, type again.");
+			changeValuesGra1();
+		}
+		else {
+			if(Graded2[SelStudent] == true) {
+				Graded1[SelStudent] = true;
+				Graded[SelStudent] = true;
+				Score1[SelStudent] = wGrade1;
+				fScore[SelStudent] = (Score1[SelStudent] + Score2[SelStudent]) / 2;
+				search();
+			}
+			else {
+				Graded1[SelStudent] = true;
+				Score1[SelStudent] = wGrade1;
+				search();
+			}
+		}
 	}
 	public static void changeValuesGra2() {
+		double wGrade2 = 0.00;
 		Scanner grade = new Scanner(System.in);
 		System.out.println("\n\nWhat was his second grade?");
-		Score2[SelStudent] = grade.nextInt();
+		wGrade2 = grade.nextInt();
+		if(wGrade2 < 0.00 || wGrade2 > 10.00) {
+			System.out.println("\n\nError, type again.");
+			changeValuesGra2();
+		}
+		else {
+			if(Graded1[SelStudent] == true) {
+				Graded2[SelStudent] = true;
+				Graded[SelStudent] = true;
+				Score2[SelStudent] = wGrade2;
+				fScore[SelStudent] = (Score1[SelStudent] + Score2[SelStudent]) / 2;
+				search();
+			}
+			else {
+				Graded2[SelStudent] = true;
+				Score2[SelStudent] = wGrade2;
+				search();
+			}
+		}
 		
 	}
 	public static void changeValuesGraAll() {
+		double wGrade1 = 0.00;
 		Scanner grade = new Scanner(System.in);
 		System.out.println("\n\nWhat was his first grade?");
-		Score1[SelStudent] = grade.nextInt();
+		wGrade1 = grade.nextInt();
+		if(wGrade1 < 0.00 || wGrade1 > 10.00) {
+			System.out.println("\n\nError, type again.");
+			changeValuesGraAll();
+		}
+		else {
+				Graded1[SelStudent] = true;
+				Score1[SelStudent] = wGrade1;
+			
+		}
+		double wGrade2 = 0.00;
+		System.out.println("\n\nWhat was his second grade?");
+		wGrade2 = grade.nextInt();
+		if(wGrade2 < 0.00 || wGrade2 > 10.00) {
+			System.out.println("\n\nError, type again.");
+			changeValuesGra2();
+		}
+		else {
+				Graded2[SelStudent] = true;
+				Graded[SelStudent] = true;
+				Score2[SelStudent] = wGrade2;
+				fScore[SelStudent] = (Score1[SelStudent] + Score2[SelStudent]) / 2;
+				if(fScore[SelStudent] < 6.00) {
+					Status[SelStudent] = "REC";
+				}
+				search();
+			
+		}
 		
 	}
 	public static void changeValuesGra() {
@@ -118,20 +193,39 @@ public class ProjGrading {
 	
 	public static void search() {
 		Scanner retry = new Scanner(System.in);
-		for(int x = 0; x <= 26; x++) {
-			if(Code[x].equalsIgnoreCase(readitnow)) {
-				x = SelStudent;
+		for(int x = 0; x < Name.length; x++) {
+			if(Code[x].equals(readitnow)) {
+				SelStudent = x;
+				if(Graded[x] == true && Abscented[x] == true) {
+					if(fScore[x] < 6.00) {
+						Status[x] = "REC";
+					}
+					else {
+						if(Abscence[x] >=40) {
+							Status[x] = "REC";
+						}
+						else {
+							Status[x] = "APPROVD";
+						}
+						
+					}
+				}
 				System.out.println("\nFound them!\n");
 				System.out.println("Code\t\tNumber\t\tAbscence\t1st Grade\t2nd Grade\tFinal Grade\tStatus\t\tName");
 				if(Status[x] == null) {
-					System.out.printf("\n%s\t\t%s\t\t%d\t\t%.2f\t\t%.2f\t\t%.2f\t\tNO DATA\t\t%s",Code[x],Number[x],Abscence[x],Score1[x],Score2[x],fScore[x],Name[x]);
-					wdywtd();
-					break;
+					if(Graded[x] == false) {
+						System.out.printf("\n%s\t\t%s\t\t%d\t\t%.2f\t\t%.2f\t\tNO DATA\t\tNO DATA\t\t%s",Code[x],Number[x],Abscence[x],Score1[x],Score2[x],Name[x]);
+						wdywtd();
+					}
+					else {
+						System.out.printf("\n%s\t\t%s\t\t%d\t\t%.2f\t\t%.2f\t\t%.2f\t\tNO DATA\t\t%s",Code[x],Number[x],Abscence[x],Score1[x],Score2[x],fScore[x],Name[x]);
+						wdywtd();
+					}
+					
 				}
 				else {
 					System.out.printf("\n%s\t\t%s\t\t%d\t\t%.2f\t\t%.2f\t\t%.2f\t\t%s\t\t%s",Code[x],Number[x],Abscence[x],Score1[x],Score2[x],fScore[x],Status[x],Name[x]);
 					wdywtd();
-					break;
 				}
 			
 			}
@@ -157,6 +251,7 @@ public class ProjGrading {
 			changeValuesGra();
 		}
 		if(command == 3) {
+			readitnow = null;
 			Jump.main(35);
 			main(null);
 		}
