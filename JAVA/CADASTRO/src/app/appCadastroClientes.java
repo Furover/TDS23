@@ -1,14 +1,16 @@
 package app;
 
-import entities.clientes;
+import entities.Pessoa;
+import entities.Terceiro;
 import entities.funcionario;
 
 public class appCadastroClientes {
 
 	public static void main(String[] args) {
-		clientes c1 = new clientes("11111111111","Fabrício Sanches",1999);
-		clientes c2 = new clientes();
+		Pessoa c1 = new Pessoa("11111111111","Fabrício Sanches",1999);
+		Pessoa c2 = new Pessoa();
 		funcionario f1 = new funcionario();
+		Terceiro t1 = new Terceiro("10320432042", "Gabaghoul", 2002, "matematica", "Gamer", 100, 60, "Brasilondes", 20);
 		
 		c2.insiraCredenciais("nome");
 		c2.insiraCredenciais("cpf");

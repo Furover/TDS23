@@ -1,6 +1,6 @@
 package entities;
 
-public class funcionario extends clientes{
+public class funcionario extends Pessoa{
 	private String matricula;
 	private String funcao;
 	private double valorHora;

@@ -2,7 +2,7 @@ package entities;
 
 import java.util.Scanner;
 
-public class clientes {
+public class Pessoa {
 	private String cpf, nome, pronomes;
 	private int numCartao;
 	private String endereco;
@@ -12,17 +12,17 @@ public class clientes {
 	private int idade;
 	
 	//sobrecarga de construtor
-	public clientes() {
+	public Pessoa() {
 		
 	}
-	public clientes(String cpf, String nome, int anoNascimento) {
+	public Pessoa(String cpf, String nome, int anoNascimento) {
 		super();
 		this.cpf = cpf;
 		this.nome = nome;
 		this.anoNascimento = anoNascimento;
 	}
 	//construtor total
-	public clientes(String cpf, String nome, String pronomes, int numCartao, String endereco, String dataNascimento,
+	public Pessoa(String cpf, String nome, String pronomes, int numCartao, String endereco, String dataNascimento,
 			int anoNascimento, int anoAtual, int idade) {
 		super();
 		this.cpf = cpf;
