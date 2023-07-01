@@ -3,6 +3,7 @@ package entities;
 import java.util.Scanner;
 
 public class watplane {
+	//ATRIBUTES
 	private int velocidade;
 	private boolean ligado;
 	private String porte;
@@ -36,7 +37,7 @@ public class watplane {
 		this.anoFab = anoFab;
 	}
 	
-	//CLASSES NORMAIS
+	//METHODS
 	public void ligarDesligar(int func) {
 		if(func > 0 && ligado == false) {
 			System.out.println("Ligando avião...");
