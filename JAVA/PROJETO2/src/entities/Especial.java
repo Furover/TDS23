@@ -2,13 +2,12 @@ package entities;
 
 public class Especial extends Conta{
 	//feito pelo Mateus Nezzi, número 19 :3
-	
+
+	private double limite = 1000.00;
 	public Especial(int numero, String cpf) {
 		super(numero, cpf);
 
 	}
-
-	private double limite = 1000.00;
 	
 	@Override
 	public void debito(double saldoF2){
