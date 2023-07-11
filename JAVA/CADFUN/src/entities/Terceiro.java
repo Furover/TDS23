@@ -9,13 +9,17 @@ public class Terceiro extends funcionario{
 		this.codEmpresa = codEmpresa;
 		this.diferencialSalario = diferencialSalario;
 	}
-	public Terceiro(String matricula, String nome, String codEmpresa, double diferencialSalario) {
+	public Terceiro(String matricula, String nome, String codEmpresa, double diferencialSalario, double valorHora, int horasTrabalhadas) {
 		super(matricula, nome);
 		this.codEmpresa = codEmpresa;
 		this.diferencialSalario = diferencialSalario;
 	}
 	public Terceiro() {
 		
+	}
+	@Override
+	public double retornarSalario() {
+		return ((super.getHorasTrabalhadas() * super.getValorHora()) + this.diferencialSalario);
 	}
 	public String getNomeEmpresaTerceiro() {
 		return codEmpresa;
@@ -29,6 +33,13 @@ public class Terceiro extends funcionario{
 	public void setDiferencialSalario(double diferencialSalario) {
 		this.diferencialSalario = diferencialSalario;
 	}
+	@Override
+	public String toString() {
+		return "Terceiro [codEmpresa=" + codEmpresa + ", diferencialSalario=" + diferencialSalario
+				+ ", retornarSalario()=" + retornarSalario() + ", getMatricula()=" + getMatricula()
+				+ ", getValorHora()=" + getValorHora() + ", getNome()=" + getNome() + "]";
+	}
+	
 	
 	
 }

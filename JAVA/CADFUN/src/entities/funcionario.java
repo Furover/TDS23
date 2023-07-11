@@ -14,14 +14,14 @@ public class funcionario extends Pessoa{
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
 	public funcionario(String matricula, String nome) {
-		super();
+		super(nome);
 		this.matricula = matricula;
 	}
 	public funcionario() {
 		super();
 	}
 	public double retornarSalario() {
-		return (this.horasTrabalhadas * this.valorHora);
+		return this.horasTrabalhadas * this.valorHora;
 	}
 	public String getMatricula() {
 		return matricula;
@@ -47,6 +47,12 @@ public class funcionario extends Pessoa{
 	public void setHorasTrabalhadas(int horasTrabalhadas) {
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
+	@Override
+	public String toString() {
+		return "funcionario [matricula=" + matricula + ", funcao=" + funcao + ", valorHora=" + valorHora
+				+ ", horasTrabalhadas=" + horasTrabalhadas + ", retornarSalario()=" + retornarSalario() + "]";
+	}
+	
 	
 	
 }
