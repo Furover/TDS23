@@ -2,8 +2,8 @@ package entities;
 
 public abstract class Conta {
 	private int numero = 0;
-	private String cpf = " ";
-	private double saldo = 0;
+	private String cpf = "";
+	private double saldo = 0.00;
 	private boolean ativo = false;
 	
 	
@@ -72,10 +72,10 @@ public abstract class Conta {
 		this.ativo = true;
 	}
 	public void debito(double saldoF) {
-		(this.saldo - saldoF);
+		this.saldo -= saldoF;
 	}
 	public void credito(double saldoF) {
-		(this.saldo + saldoF);
+		this.saldo += saldoF;
 	}
 	
 }
