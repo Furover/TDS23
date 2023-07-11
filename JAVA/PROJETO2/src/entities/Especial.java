@@ -14,11 +14,9 @@ public class Especial extends Conta{
 		if(this.getSaldo() - saldoF2 < 0 && (this.limite + this.getSaldo()) - saldoF2 >= 0) {
 			this.limite = (this.getSaldo() + this.limite) - saldoF2;
 			super.debito(getSaldo());
-			System.out.println("1");
 		}
 		else if(this.getSaldo() - saldoF2 >= 0){
 			super.debito(saldoF2);
-			System.out.println("2");
 
 		}
 		else {
