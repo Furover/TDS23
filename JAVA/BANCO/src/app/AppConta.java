@@ -25,7 +25,7 @@ public class AppConta {
 		Poupanca p1 = new Poupanca(1, "1111111", 10);
 		Corrente c1 = new Corrente (1, "1111111", 3);
 		Empresa e1 = new Empresa (1, "111111");
-		Especial es1 = new Especial (1, "111111");
+		Especial es1 = new Especial (1, "111111",1000);
 		Estudantil est1 = new Estudantil (1, "111111", 1000);
 		
 	

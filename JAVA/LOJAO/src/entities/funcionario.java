@@ -6,6 +6,7 @@ public class funcionario {
 	private double valorHora;
 	private int horasTrabalhadas;
 	public funcionario(String nome, String matricula, double valorHora, int horasTrabalhadas) {
+		this.nome = nome;
 		this.matricula = matricula;
 		this.valorHora = valorHora;
 		this.horasTrabalhadas = horasTrabalhadas;
