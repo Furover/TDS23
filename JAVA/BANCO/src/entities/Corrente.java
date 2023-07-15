@@ -21,7 +21,7 @@ public class Corrente extends Conta {
 		double x = this.getSaldo();
 		if(x<0) {
 		this.credito(30.00 * quantTalao);
-		System.out.println("Valor inválido");
+		System.out.println("Você não possui crédito suficiente");
 		}
 		
 		}

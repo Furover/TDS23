@@ -24,9 +24,9 @@ public class AppConta {
 		Scanner input = new Scanner(System.in);
 		Poupanca p1 = new Poupanca(1, "1111111", 10);
 		Corrente c1 = new Corrente (1, "1111111", 3);
-		Empresa e1 = new Empresa (1, "111111");
-		Especial es1 = new Especial (1, "111111",1000);
-		Estudantil est1 = new Estudantil (1, "111111", 1000);
+		Empresa e1 = new Empresa (1, "111111",1);
+		Especial es1 = new Especial (1, "111111", 1000);
+		Estudantil est1 = new Estudantil (1, "111111", 5000);
 		
 	
 		
@@ -49,11 +49,12 @@ public class AppConta {
 			System.out.println("FOMY BANK");
 			System.out.println("FOME DE DINHEIRO!");
 			System.out.println(" ");
-			System.out.println("Conta poupança");
-			System.out.println("Saldo atual :"+p1.getSaldo());
-			System.out.println("Movimento : D - Debito, C - Credito");
-			r = input.next().toUpperCase();
 			for(int i = 1; i <= 10; i++) {
+				if(i <= 10) {
+					System.out.println("Saldo atual :"+p1.getSaldo());
+					System.out.println("Movimento : D - Debito, C - Credito");
+					r = input.next().toUpperCase().toUpperCase();
+					}
 				if(r.equals("D")){
 					if (p1.getSaldo() == 0) {
 						System.out.println("Saldo insuficiente faça um Credito");
@@ -66,16 +67,12 @@ public class AppConta {
 					System.out.println("Valor para Credito ");
 					p1.credito(input.nextDouble());
 				}
-				if(i <= 10) {
-				System.out.println("Saldo atual :"+p1.getSaldo());
-				System.out.println("Movimento : D - Debito, C - Credito");
-				r = input.next().toUpperCase().toUpperCase();
-				}
 			}
+			System.out.println("Saldo atual :"+p1.getSaldo());
 			System.out.println("Qual o dia de hj?:  ");
 			ani = input.nextInt();
 			p1.correcao(ani);
-			System.out.println(p1.getSaldo());
+			System.out.println("Seu saldo final é: "+p1.getSaldo());
 		}
 		if (res == 2) {
 			boolean corrente = false;
@@ -83,7 +80,7 @@ public class AppConta {
 			System.out.println("FOME DE DINHEIRO!");
 			System.out.println(" ");
 			c1.ativar();
-			System.out.println("Conta poupança");
+			System.out.println("Conta Corrente");
 			for(int i = 1; i <= 10; i++) {
 				if(i <= 10) {
 					System.out.println("Saldo atual :"+c1.getSaldo());
@@ -111,12 +108,15 @@ public class AppConta {
 							System.out.println("Quantos cheques você quer? (Até 3)");
 							c1.pediTalao(input.nextInt());
 							System.out.println("Obrigado, até a próxima");
+							System.out.println("Saldo: "+c1.getSaldo());
 							corrente = true;
 							break;
 						}
 						else if(r.equals("N")) {
 							System.out.println("Obrigado, até a próxima");
-							break;
+							System.out.println("Saldo: "+c1.getSaldo());
+							corrente = true;
+							break;						
 						}	
 				}
 			}
@@ -133,13 +133,15 @@ public class AppConta {
 				}
 				else if(r.equals("N")) {
 					System.out.println("Obrigado, até a próxima");
+					System.out.println("Saldo: "+c1.getSaldo());
+					
 				
 				}
 			}
 				
 				
 		}
-		System.out.println("Saldo atual :"+c1.getSaldo());
+		
 
 			
 		
@@ -148,11 +150,12 @@ public class AppConta {
 			System.out.println("FOME DE DINHEIRO!");
 			System.out.println(" ");
 			es1.ativar();
-			System.out.println("Conta poupança");
-			System.out.println("Saldo atual :"+es1.getSaldo()+"\nLimite: "+es1.getLimite());
-			System.out.println("Movimento : D - Debito, C - Credito");
-			r = input.next().toUpperCase();
 			for(int i = 1; i <= 10; i++) {
+				if(i <= 10) {
+					System.out.println("Saldo atual :"+es1.getSaldo()+"\nLimite: "+es1.getLimite());
+					System.out.println("Movimento : D - Debito, C - Credito");
+					r = input.next().toUpperCase();
+				}
 				if(r.equals("D")){
 					System.out.println("Quanto deseja debitar?");
 					es1.debito(input.nextDouble());				
@@ -160,21 +163,20 @@ public class AppConta {
 					System.out.println("Valor para Credito ");
 					es1.credito(input.nextDouble());
 				}
-				System.out.println("Saldo atual :"+es1.getSaldo()+"\nLimite: "+es1.getLimite());
-				System.out.println("Movimento : D - Debito, C - Credito");
-				r = input.next().toUpperCase();
-			}
+		
+			}System.out.println("Saldo atual :"+es1.getSaldo()+"\nLimite: "+es1.getLimite());
 		}
 		if (res == 4) {
 			System.out.println("FOMY BANK");
 			System.out.println("FOME DE DINHEIRO!");
 			System.out.println(" ");
 			e1.ativar();
-			System.out.println("Conta poupança");
-			System.out.println("Saldo atual :"+e1.getSaldo());
-			System.out.println("Movimento : D - Debito, C - Credito, E - Emprestimo");
-			r = input.next().toUpperCase();
 			for(int i = 1; i <= 10; i++) {
+				if (i <= 10) {
+					System.out.println("Saldo atual :"+e1.getSaldo()+" Limite atual: "+ e1.getLimiteEmprestimo());
+					System.out.println("Movimento : D - Debito, C - Credito, E - Emprestimo");
+					r = input.next().toUpperCase();
+					}
 				if(r.equals("D")){
 					if (e1.getSaldo() == 0) {
 						System.out.println("Saldo insuficiente faça um Credito");
@@ -190,21 +192,21 @@ public class AppConta {
 					System.out.println("Qual o valor do emprestimo?: ");
 					e1.pedirEmprestimo(input.nextDouble());
 				}
-				System.out.println("Saldo atual :"+e1.getSaldo()+" Limite atual: "+ e1.getLimiteEmprestimo());
-				System.out.println("Movimento : D - Debito, C - Credito, E - Emprestimo");
-				r = input.next().toUpperCase();
+			
 			}
+			System.out.println("Saldo atual :"+e1.getSaldo()+" Limite atual: "+ e1.getLimiteEmprestimo());
 		}
 		if (res == 5) {
 			System.out.println("FOMY BANK");
 			System.out.println("FOME DE DINHEIRO!");
 			System.out.println(" ");
 			p1.ativar();
-			System.out.println("Conta Estudantil");
-			System.out.println("Saldo atual :"+p1.getSaldo());
-			System.out.println("Movimento : D - Debito, C - Credito, E - Estudantil");
-			r = input.next().toUpperCase();
 			for(int i = 1; i <= 10; i++) {
+				if( i <= 10) {
+					System.out.println("Saldo atual :"+est1.getSaldo()+" Limite atual: "+ est1.getLimiteEstudantil());
+					System.out.println("Movimento : D - Debito, C - Credito, E - Emprestimo");
+					r = input.next().toUpperCase();
+				}
 				if(r.equals("D")){
 					if (est1.getSaldo() == 0) {
 						System.out.println("Saldo insuficiente faça um Credito: ");
@@ -220,13 +222,11 @@ public class AppConta {
 					System.out.println("Qual o valor do emprestimo?: ");
 					est1.usarEstudantil(input.nextDouble());
 				}
-				System.out.println("Saldo atual :"+est1.getSaldo()+" Limite atual: "+ est1.getLimiteEstudantil());
-				System.out.println("Movimento : D - Debito, C - Credito, E - Emprestimo");
-				r = input.next().toUpperCase();
-			}
+			
+			}System.out.println("Saldo atual :"+est1.getSaldo()+" Limite atual: "+ est1.getLimiteEstudantil());
 		}
 	
 		
+		main(args); 
 	}
-
 }

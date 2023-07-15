@@ -47,9 +47,10 @@ public class funcionario {
 	}
 	@Override
 	public String toString() {
-		return "funcionario [matricula=" + matricula + ", valorHora=" + valorHora
-				+ ", horasTrabalhadas=" + horasTrabalhadas + ", retornarSalario()=" + retornarSalario() + "]";
+		return "Enrollment: " + matricula + "\nName: " + nome + "\nMoney by hour: " + valorHora
+				+ "\nHours worked: " + horasTrabalhadas + "\nSalary: R$ " + retornarSalario();
 	}
+	
 	
 	
 	

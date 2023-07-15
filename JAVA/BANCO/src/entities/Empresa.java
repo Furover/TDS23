@@ -7,8 +7,9 @@ public class Empresa extends Conta {
 	private double emprestimoEmpresa;
 	private double limiteEmprestimo = 10000.00;
 
-	public Empresa(int numero, String cpf) {
+	public Empresa(int numero, String cpf, int emprestimoEmpresa) {
 		super(numero, cpf);
+		this.emprestimoEmpresa = emprestimoEmpresa;
 	}
 
 	public double getEmprestimoEmpresa() {

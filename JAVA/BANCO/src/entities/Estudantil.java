@@ -25,15 +25,16 @@ public class Estudantil extends Conta{
 
 	public void usarEstudantil(double valorEstudantil){
 	
-		if(this.limiteEstudantil > valorEstudantil) 
-		{
-
-		this.limiteEstudantil = (this.limiteEstudantil - valorEstudantil);
-		this.credito(valorEstudantil);
-		}
-		else
+		if(this.limiteEstudantil <= 0) 
 		{
 			System.out.println("Limite excedido, tente denovo.");
 		}
+		else
+		{
+
+			this.limiteEstudantil = (this.limiteEstudantil - valorEstudantil);
+			this.credito(valorEstudantil);
+		}
+
 	}
 }

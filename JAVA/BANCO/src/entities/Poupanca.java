@@ -21,7 +21,7 @@ public class Poupanca extends Conta {
 	
 	public void correcao(int data) {
 		if(getDiaAniversarioPoupanca() == data) {
-			credito(super.getSaldo() * 0.05);
+			credito(super.getSaldo() * 0.005);
 		}
 	}
 	
