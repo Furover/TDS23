@@ -8,12 +8,15 @@ public class Produto {
 	private int stock;
 	private int cart;
 	
-	public void Produto(String code, String prod, double value, int stock, int cart) {
+	public Produto(String code, String prod, double value, int stock, int cart) {
 		this.code = code;
 		this.prod = prod;
 		this.value = value;
 		this.stock = stock;
 		this.cart = cart;
+		
+	}
+	public Produto() {
 		
 	}
 
@@ -55,6 +58,13 @@ public class Produto {
 
 	public void setCart(int cart) {
 		this.cart = cart;
+	}
+	@Override
+	public String toString() {
+		return code + "\t" + prod + "\t" + value + "\t" + stock + "\t\t" + cart;
+	}
+	public String toStringCart() {
+		return code + "\t" + prod + "\t" + value + "\t" + cart;
 	}
 	
 
