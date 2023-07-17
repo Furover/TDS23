@@ -14,7 +14,7 @@ public class Produto {
 	private String code;
 	private String prod;
 	private double value;
-	private int stock;
+	private int stock = 10;
 	private int cart;
 	
 	public Produto(String code, String prod, double value, int stock, int cart) {
@@ -25,9 +25,14 @@ public class Produto {
 		this.cart = cart;
 		
 	}
+	public Produto(String code, String prod) {
+		this.code = code;
+		this.prod = prod;
+	}
 	public Produto() {
 		
 	}
+	
 	
 	public void buying() {
 		for(Produto x : list) {
@@ -39,8 +44,33 @@ public class Produto {
 		
 	}
 	public void removeStock(int qty) {
-		this.stock -= qty;
+		Scanner read = new Scanner(System.in);
+		if(qty <= 0)
+		{
+			System.out.println("Tú é burro cara? Digita direito >:(");
+			removeStock(read.nextInt());
+		}
+			else if(this.stock <= 0)
+			{
+				System.out.println("Stock zerado, impossivel remover");
+			}
+				else
+				{this.stock -= qty;}
+		
 	}
+	
+	public void addStock(int qty) {
+		Scanner read = new Scanner(System.in);
+		if(qty <= 0)
+		{
+			System.out.println("Tú é burro cara? Digita direito >:(");
+			addStock(read.nextInt());
+		}
+			else
+			{this.stock += qty;}
+		
+	}
+	
 	public void addCart(String foo) {
 		Scanner retry = new Scanner(System.in);
 		try {
@@ -141,10 +171,6 @@ public class Produto {
 
 	public int getStock() {
 		return stock;
-	}
-
-	public void setStock(int stock) {
-		this.stock = stock;
 	}
 
 	public int getCart() {
