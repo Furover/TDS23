@@ -3,6 +3,7 @@ package entities;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import app.AppLoja;
 
@@ -28,24 +29,51 @@ public class Produto {
 		
 	}
 	
-	public void addCart(int qty) {
-		Scanner retry = new Scanner(System.in);
-		if(qty <= 0 || qty > this.getStock()) {
-			System.out.println("Valor inválido, digite novamente!");
-			addCart(retry.nextInt());
+	public void buying() {
+		for(Produto x : list) {
+			if(x.getCart() > 0) {
+				x.removeStock(x.getCart());
+				x.setCart(0);
+			}
 		}
-		else {
-			this.cart += qty;
+		
+	}
+	public void removeStock(int qty) {
+		this.stock -= qty;
+	}
+	public void addCart(String foo) {
+		Scanner retry = new Scanner(System.in);
+		try {
+			int qty = Integer.parseInt(foo);
+			if(qty < 0 || qty + this.getCart() > this.getStock()) {
+				System.out.println("Valor inválido, digite novamente!");
+				addCart(retry.next());
+			}
+			else {
+				this.cart += qty;
+			}
+		}
+		catch(java.lang.NumberFormatException inM) {
+			System.out.println("Escreva um NÚMERO!!!11!");
+			addCart(retry.next());
 		}
 	}
-	public void removeCart(int qty) {
+	
+	public void removeCart(String foo) {
 		Scanner retry = new Scanner(System.in);
-		if(qty <= 0 || qty > this.getStock()) {
-			System.out.println("Valor inválido, digite novamente!");
-			removeCart(retry.nextInt());
+		try {
+			int qty = Integer.parseInt(foo);
+			if(qty < 0 || qty > this.getCart()) {
+				System.out.println("Valor inválido, digite novamente!");
+				removeCart(retry.next());
+			}
+			else {
+				this.cart -= qty;
+			}
 		}
-		else {
-			this.cart -= qty;
+		catch(java.lang.NumberFormatException inM) {
+			System.out.println("Escreva um NÚMERO!!!11!");
+			removeCart(retry.next());
 		}
 	}
 	public void Lista(boolean slogan) {
