@@ -201,7 +201,79 @@ public class AppLoja {
 	}
 	
 	public static void Damn() {
+		Scanner read = new Scanner(System.in);
 		
+		System.out.println("Oque gostaria de fazer?\n1 - voltar a comprar\n2- remover algo do carrinho\n3- voltar ao carrinho");
+		boolean usuarioburro = true;
+		
+		String decision = read.next();
+		do {
+			if(decision.equals("1"))
+			{
+				usuarioburro = false;
+				PrimaryScreen();
+			}
+				else if(decision.equals("2"))
+				{
+					usuarioburro = false;
+					RemoveCart();
+				}
+				else if(decision.equals("3"))
+				{
+					usuarioburro = false;
+					Cart();
+				}
+			
+			else 
+			{
+				System.out.println("Tu é burro mano? Escreve direito >:(\n1 - voltar a comprar\\n2- remover algo do carrinho\\n3- voltar ao carrinho");	
+				decision = read.next();
+			}
+			
+		}
+		while(usuarioburro == true);
+	}
+	public static void RemoveCart() {
+		Scanner read = new Scanner(System.in);
+		String answer;
+		foundIt = false;
+		int qty;
+		
+		System.out.println("Código\t\tProduto\t\t\tValor\tQuantidade");
+		AppLoja.Lines(75);
+		AppLoja.Jump(1);
+		for(Produto x : lp.list) {
+			if(x.getCart() > 0) {
+				System.out.println( x.toStringCart());
+				totalValue += (x.getValue() * x.getCart());
+			}
+		}
+		System.out.printf("\n\nValor total: R$ %.2f\n",totalValue);
+		Jump(1);
+        Lines(75);
+        System.out.println("\nOque gostaria de remover?");
+		answer = read.next().toUpperCase();
+		while(foundIt == false) {
+			int tries = -1;
+			for(Produto x : lp.list) {
+				tries++;
+				if(answer.equals(x.getCode())) {
+							foundIt = true;
+							System.out.println("Quanto deseja remover do seu carrinho?");
+							System.out.println("(digite 0 para cancelar)");
+							x.removeCart(read.next());
+							continueBuy();
+							break;
+						}
+				else if(tries == (lp.list.size() - 1)) {
+					System.out.println("Não achei, escreva novamente:");
+					answer = read.next().toUpperCase();
+					tries = -1;
+				}
+			}
+			
+		}
+        
 	}
 	
 	
