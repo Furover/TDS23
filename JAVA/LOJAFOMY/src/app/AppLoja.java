@@ -58,6 +58,7 @@ public class AppLoja {
 		DecisionTime();
 	}
 	public static void Cart() {
+		totalValue = 0;
 		Scanner read = new Scanner(System.in);
 		String answer;
 		boolean wrong = true;
@@ -234,6 +235,7 @@ public class AppLoja {
 		while(usuarioburro == true);
 	}
 	public static void RemoveCart() {
+		totalValue = 0;
 		Scanner read = new Scanner(System.in);
 		String answer;
 		foundIt = false;
