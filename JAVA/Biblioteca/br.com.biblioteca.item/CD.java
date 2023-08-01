@@ -1,18 +1,16 @@
 
-public class CD {
-	private String titulo;
+public class CD extends Item{
 	private String artista;
-	private int numeroFaixa;
+	private int numeroFaixas;
 	private String gravadora;
 	
 	public CD() {
 		
 	}
 	
-	public CD(int codigo, String titulo, String artista, int numeroFaixa, String gravadora) {
-		this.titulo = titulo;
+	public CD(int codigo, String titulo, String artista, int numeroFaixas, String gravadora) {
 		this.artista = artista;
-		this.numeroFaixa = numeroFaixa;
+		this.numeroFaixas = numeroFaixas;
 		this.gravadora = gravadora;
 	}
 
@@ -24,12 +22,12 @@ public class CD {
 		this.artista = artista;
 	}
 
-	public int getNumeroFaixa() {
-		return numeroFaixa;
+	public int getNumeroFaixas() {
+		return numeroFaixas;
 	}
 
-	public void setNumeroFaixa(int numeroFaixa) {
-		this.numeroFaixa = numeroFaixa;
+	public void setNumeroFaixas(int numeroFaixas) {
+		this.numeroFaixas = numeroFaixas;
 	}
 
 	public String getGravadora() {
@@ -38,13 +36,6 @@ public class CD {
 
 	public void setGravadora(String gravadora) {
 		this.gravadora = gravadora;
-	}
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
 	}
 	
 	
