@@ -1,6 +1,3 @@
-USE [FomyDB]
-GO
-
 INSERT INTO [dbo].[Usuario]
            ([Email]
            ,[Nome]
