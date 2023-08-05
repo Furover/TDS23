@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="EscolaFullCat">
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.escolafullcat.entidade"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.escolafullcat.servlet"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.escolafullcat.dao"/>
+                
+        <property name="context-root" value="EscolaFullCat"/>
+                
+        <property name="java-output-path" value="/EscolaFullCat/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>
