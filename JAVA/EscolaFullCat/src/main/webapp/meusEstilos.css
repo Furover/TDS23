@@ -1,0 +1,316 @@
+@charset "utf-8";
+@font-face {
+	
+	font-family: "coca cola ii";
+	src: url("fontes/coca cola ii.ttf") format("truetype");
+	
+}
+/* CSS Document */
+
+body {
+	background-color: #2e2e2e;
+	/* background-image: url("imagens/background1.jpg"); */
+	
+	/* margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin: 10px 10px 10px 10px;
+	*/
+	margin: 10px;
+	
+	/* font-family: coca cola ii; */
+	
+	text-align: justify;
+	
+	
+}
+
+.helpMe{
+	
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.ctec{
+	background-color: #3D3D3D;
+	border-radius: 15px;
+	margin-top: 20px;
+	
+}
+
+.fundo{
+	background-color: #3D3D3D;
+	border-radius: 15px;
+	
+}
+
+.fundoDiv{
+	background-color: #3D3D3D;
+	border-radius: 15px;
+	padding: 10px;
+	
+}
+
+.arredondaBorda{
+    width: 40%;
+    height: auto;
+    border-radius: 15px;		
+}
+
+.tituloNome{
+    font-size: max(35px, 4.8vw); /* retorna o maior valor entre om mínimo e máximo */
+	margin: 10px;
+	color: #d6d6d6;
+	
+	font-family: franklin gothic heavy;
+}
+
+.fonteZero{
+	font-size: 0px;	
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  text-align: center;
+  background-color: #3D3D3D;
+	
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.logosHome {
+	width: 55%;
+	height: auto;
+	
+}
+
+a{
+	color: #8CED0A;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=reset] {
+  width: 100%;
+  background-color: salmon;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=reset]:hover {
+  background-color: crimson;
+}
+
+h1,h2,h3{
+	font-family: verdana;
+}
+
+section{
+	background-color: #1f1f1f;
+	padding: 10px;
+	font-family: arial;
+	color: #d6d6d6;
+}
+
+footer{
+	background-color: #DB7E00;
+	padding: 10px;
+	color: #d6d6d6;
+	font-family: verdana;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+nav{
+    background-color: #DB7E00;
+    height: 40px;
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 14px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+nav ul{
+	height: auto;
+	padding: 8px 0px;
+	margin: 0px;
+	
+}
+
+nav li{
+	display: inline;
+	padding: 8px 0px;
+	margin: 0px;
+}
+
+nav li:hover{
+	background-color: #C06E00;
+	border-radius: 15px;
+}
+
+nav a{
+	color: #d6d6d6;
+	text-decoration: none;
+	padding: 8px;
+}
+
+nav a:hover{
+ 	color: #8CED0A;
+}
+
+img{
+	max-width: 100%;
+	padding: 10px;
+	
+	
+}
+
+form, textarea, input{
+	max-width: 100%;
+	padding: 0px;
+	
+}
+
+table, tbody{
+    width: 100%;
+}
+
+
+iframe{
+	width: 100%;
+	border: none;
+	height: 641px;
+}
+
+video{
+	width: 100%;
+}
+
+@media all and (min-width: 1394px){
+	.tituloNome{
+		font-size: max(35px, 3.8vw);
+		
+	}
+	
+}
+
+@media all and (min-width: 1743px){
+	.tituloNome{
+		font-size: max(35px, 3.5vw);
+		
+	}
+	
+}
+
+@media all and (min-width: 1200px){
+	body{
+		width: 1200px;
+		margin: auto;
+		}
+}
+
+@media all and (max-width: 886px){
+	header{
+		text-align: center;
+	}
+	
+	.logosHome {
+		width: 100%;
+		height: auto;
+	
+}
+	.arredondaBorda{
+   		width: 46%;		
+}
+	
+}
+
+@media all and (max-width: 800px){
+	.arredondaBorda{
+   		width: 46%;		
+}
+	
+}
+
+@media all and (max-width: 650px){
+	.arredondaBorda{
+    width: 100%;
+    padding: 0px;
+	border-radius: 4px;
+	}
+	
+	section{
+		font-size: 18px;
+		
+	}
+	
+}
+
+@media all and (max-width: 480px){
+	nav{
+			height: 100%;
+		}
+		
+	nav li{
+			display: block;
+			padding: 10px;
+			margin: 0px;
+		}
+	
+	h2, h3{
+		font-size: 20px;
+		text-align: center;	
+	}
+	
+	iframe{
+		height: 256px;
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
