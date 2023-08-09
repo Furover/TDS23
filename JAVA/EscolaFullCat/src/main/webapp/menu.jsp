@@ -41,6 +41,21 @@
 <input type="submit" value="Enviar">
 <input type="reset" value="Limpar"><br/>
 </form>
+</div><br/><br/>
+<div class="fundoDiv">
+ <table style="padding-top: 10px; padding-bottom: 10px; text-align: center;">
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    
+  </tr>
+  <tr>
+    <td style="padding-top: 20px;">O nome aparecerá aqui</td>
+    <td style="padding-top: 20px;">O email aparecerá aqui</td>
+    <td style="padding-top: 20px;">O telefone aparecerá aqui</td>
+  </tr>
+</table> 
 </div>
 </section>
 </body>

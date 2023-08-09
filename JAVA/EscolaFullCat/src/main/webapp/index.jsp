@@ -47,7 +47,7 @@
 	<section class="helpMe">
 	<div class="fundoDiv">
 	<h1>Seja bem vindo administradore!</h1>
-	<p>Neste site, você pode adicionar/remover/alterar ume alune e também buscar por ume alune especifice.</p>
+	<p>Neste site, você pode adicionar/remover/alterar ume alune e também buscar por ume.</p>
 	<img class="arredondaBorda" src="imagens/aluno.jpg">
 	</div>
 	</section>
