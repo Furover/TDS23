@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Biblioteca">
+            
+    
+    <wb-module deploy-name="BibliotecaOriginal">
+                        
+        
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.biblioteca"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.biblioteca.conexao"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.biblioteca.dao"/>
+                        
+        
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.biblioteca.item"/>
-        <property name="context-root" value="Biblioteca"/>
-        <property name="java-output-path" value="/Biblioteca/build/classes"/>
+                        
+        
+        <property name="java-output-path" value="/BibliotecaOriginal/build/classes"/>
+        <property name="context-root" value="BibliotecaOriginal"/>
+                    
+    
     </wb-module>
+        
+
 </project-modules>
