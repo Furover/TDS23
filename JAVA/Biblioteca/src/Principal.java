@@ -42,6 +42,7 @@ public class Principal {
                     System.out.println("1 - Cds");
                     System.out.println("2 - Livros");
                     System.out.println("Digite a opção desejada");
+                    op = en.nextInt();
                     
                     if(op==1){
                         cd = new Cd();
@@ -113,6 +114,7 @@ public class Principal {
                     System.out.println("1 - Cds");
                     System.out.println("2 - Livros");
                     System.out.println("Digite a opção desejada");
+                    op = en.nextInt();
                     
                     if(op==1){
                         cd = new Cd();
