@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17"/>
-	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="br.com.biblioteca"/>
-	<classpathentry kind="src" path="br.com.biblioteca.conexao"/>
-	<classpathentry kind="src" path="br.com.biblioteca.dao"/>
-	<classpathentry kind="src" path="br.com.biblioteca.item"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-20">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre8-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre8-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre11-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/3264.343/Downloads/sqljdbc_12.4/enu/jars/mssql-jdbc-12.4.0.jre11-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
