@@ -124,7 +124,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 300;
   color: #afafaf;
@@ -147,12 +147,12 @@ body {
 }
 
 ::selection {
-  background: #4da6e7;
+  background: #7EB77F;
   color: #fff !important;
 }
 
 ::-moz-selection {
-  background: #4da6e7;
+  background: #7EB77F;
   color: #fff !important;
 }
 
@@ -172,10 +172,6 @@ body {
   }
 }
 
-.logoFomy {
-  width: 25%;
-}
-
 .page-section {
   margin-top: 120px;
 }
@@ -188,7 +184,7 @@ body {
 .section-heading h6 {
   font-size: 15px;
   font-weight: 700;
-  color: #4da6e7;
+  color: #7EB77F;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -203,20 +199,20 @@ body {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 .section-heading .line-dec {
   width: 50px;
   height: 2px;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
 }
 
 .border-first-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #4da6e7 !important;
-  border: 1px solid #4da6e7 !important;
+  color: #7EB77F !important;
+  border: 1px solid #7EB77F !important;
   border-radius: 23px;
   font-weight: 500 !important;
   letter-spacing: 0.3px !important;
@@ -224,7 +220,7 @@ body {
 }
 
 .border-first-button a:hover {
-  background-color: #4da6e7;
+  background-color: #7EB77F;
   color: #fff !important;
 }
 
@@ -257,7 +253,7 @@ header
 }
 
 .pre-header ul.info li a:hover {
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 .pre-header ul.info li a i {
@@ -287,7 +283,7 @@ header
 }
 
 .pre-header ul.social-media li a:hover {
-  background-color: #4da6e7;
+  background-color: #7EB77F;
 }
 
 .background-header {
@@ -306,7 +302,7 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 .background-header .nav li a.active {
@@ -318,7 +314,7 @@ header
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
   content: '';
   left: 50%;
   bottom: -20px;
@@ -425,12 +421,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #4da6e7!important;
+  color: #7EB77F!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #4da6e7!important;
+  color: #7EB77F!important;
   opacity: 1;
 }
 
@@ -492,7 +488,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #4da6e7!important;
+  color: #7EB77F!important;
   padding-left: 25px;
 }
 
@@ -632,7 +628,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 @media (max-width: 1200px) {
@@ -671,7 +667,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #4da6e7!important;
+    color: #7EB77F!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -733,7 +729,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #4da6e7!important;
+    color: #7EB77F!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -847,7 +843,7 @@ preloader
     height: 16px;
     top: 12px;
     left: 15px;
-    background: #4da6e7;
+    background: #7EB77F;
     border-radius: 50%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -870,7 +866,7 @@ preloader
     width: 16px;
     height: 16px;
     margin-left: 16px;
-    background: #4da6e7;
+    background: #7EB77F;
     border-radius: 50%;
 }
 
@@ -893,7 +889,6 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  background-image: url(../images/slider-left-dec.jpg);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -923,7 +918,7 @@ Banner Style
   text-transform: capitalize;
   font-size: 20px;
   font-weight: 700;
-  color: #4da6e7;
+  color: #7EB77F;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -951,6 +946,10 @@ Banner Style
 .main-banner .right-image img {
   max-width: 593px;
 }
+.alberto{
+  width: 130px;
+}
+
 
 
 
@@ -961,7 +960,10 @@ About Style
 */
 
 #about {
-  padding-top: 130px;
+  background-image: url(../images/slider-right-dec.jpg);
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 .about-left-image img {
@@ -1029,7 +1031,7 @@ About Style
 }
 
 .first-skill-item .progress .progress-bar {
-  border-color: #4da6e7;
+  border-color: #7EB77F;
 }
 
 .second-skill-item .progress .progress-bar {
@@ -1373,7 +1375,7 @@ Services Style
 .services .left-text h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #4da6e7 !important;
+  color: #7EB77F !important;
 }
 
 .services .left-text p {
@@ -1459,7 +1461,7 @@ Free Quote
   outline: none;
   border: none;
   margin-left: 30px;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
   font-size: 15px;
   color: #fff;
 }
@@ -1479,7 +1481,7 @@ Portfolio
 
 .our-portfolio:before {
   content: '';
-  background-image: url(../images/portfolio-right-dec.jpg);
+  background-image: url(../images/slider-right-dec.jpg);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -1491,7 +1493,7 @@ Portfolio
 
 .our-portfolio:after {
   content: '';
-  background-image: url(../images/portfolio-left-dec.jpg);
+  background-image: url(../images/services-left-dec.jpg);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -1530,7 +1532,7 @@ Portfolio
 
 .portfolio-item:hover .down-content h4,
 .portfolio-item:hover .down-content span {
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 .portfolio-item .thumb img {
@@ -1588,7 +1590,7 @@ Portfolio
 
 .our-portfolio .owl-nav span:hover {
   color: #fff;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
 }
 
 
@@ -1652,7 +1654,7 @@ Blog
   font-size: 15px;
   color: #fff;
   padding: 8px 12px;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
   border-radius: 18px;
   display: inline-block;
 }
@@ -1691,7 +1693,7 @@ Blog
 
 .blog-post .down-content .border-first-button {
   display: inline-block;
-  float: right;
+  /*float: right;*/
 }
 
 .blog-posts {
@@ -1708,7 +1710,7 @@ Blog
 
 .post-item .thumb {
   display: inline-block;
-  float: left;
+  /*float: left;*/
   margin-right: 30px;
 }
 
@@ -1725,7 +1727,7 @@ Blog
   font-size: 15px;
   color: #fff;
   padding: 8px 12px;
-  background-color: #4da6e7;
+  background-color: #7EB77F;
   border-radius: 18px;
   display: inline-block;
 }
@@ -1846,7 +1848,7 @@ form#contact #map iframe {
 }
 
 .fill-form .icon:hover a {
-  color: #4da6e7;
+  color: #7EB77F;
 }
 
 form#contact input {
@@ -1894,20 +1896,20 @@ form#contact button {
   background-color: #fff;
   font-size: 15px;
   font-weight: 400;
-  color: #4da6e7;
+  color: #7EB77F;
   margin-top: 30px;
   width: 100%;
   text-transform: capitalize;
   padding: 12px 25px;
   border-radius: 23px;
   letter-spacing: 0.25px;
-  border: 1px solid #4da6e7;
+  border: 1px solid #7EB77F;
   transition: all .3s;
   outline: none;
 }
 
 form#contact button:hover {
-  background-color: #4da6e7!important;
+  background-color: #7EB77F!important;
   color: #fff!important;
 }
 
@@ -1928,7 +1930,7 @@ footer {
 footer p {
   text-align: center;
   margin: 20px 0px;
-  color: #fff;
+  color: black;
 }
 
 footer p a {
@@ -2104,4 +2106,65 @@ responsive
   form#contact {
     padding: 30px;
   }
+
+  .carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Adjust the width as needed */
+  max-height: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide occupies the full width of the container */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: Add navigation buttons */
+.carousel-container .prev,
+.carousel-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-container .prev {
+  left: 10px;
+}
+
+.carousel-container .next {
+  right: 10px;
+}
+
+/* Optional: Add indicators */
+.carousel-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-indicators button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background-color: #333;
+}
 }
