@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="Cliente1">
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.cliente.dao"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.cliente.entidade"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/br.com.cliente.servlet"/>
+                
+        <property name="context-root" value="Cliente1"/>
+                
+        <property name="java-output-path" value="/Cliente1/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>
