@@ -66,7 +66,7 @@
                   <a class="nav-link" href="#chocolates">Chocolates</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html">+Chocolate</a>
+                  <a class="nav-link" href="cadastro.jsp">+Chocolate</a>
                 </li>
               </ul>
             </div>

@@ -1,8 +1,6 @@
 
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -13,42 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class updateServlet
+ * Servlet implementation class UpdateServlet
  */
-@WebServlet("/updateServlet")
-public class updateServlet extends HttpServlet {
+@WebServlet("/UpdateServlet")
+public class UpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UsuarioDao1 usuariodao1;
-       
+	
+	private ChocolateDAO chocolatedao;
+	
     /**
-     * @see HttpServlet#HttpServlet()
+     * Default constructor. 
      */
-    public updateServlet() {
-        super();
+    public UpdateServlet() {
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		usuariodao1 = new UsuarioDao1();
-	}
-
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-	}
-	
-	private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
-		int id = Integer.parseInt(request.getParameter("id"));
-		Usuario existingUser = usuariodao1.selectUser(id);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
-		request.setAttribute("user", existingUser);
-		dispatcher.forward(request, response);
+		chocolatedao = new ChocolateDAO();
 	}
 
 	/**
@@ -58,7 +36,15 @@ public class updateServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
+	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException{
+		int id = Integer.parseInt(request.getParameter("id"));
+		Chocolate existingChoco = chocolatedao.selectChoco(id);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+		request.setAttribute("user", existingChoco);
+		dispatcher.forward(request, response);
+		}
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

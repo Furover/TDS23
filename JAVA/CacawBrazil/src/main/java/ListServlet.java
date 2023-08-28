@@ -14,18 +14,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class listServlet
+ * Servlet implementation class ListServlet
  */
-@WebServlet("/listServlet")
-public class listServlet extends HttpServlet {
+@WebServlet("/ListServlet")
+public class ListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private UsuarioDao1 usuariodao1;
-       
+	
+	private ChocolateDAO chocolatedao;
+
     /**
-     * @see HttpServlet#HttpServlet()
+     * Default constructor. 
      */
-    public listServlet() {
-        super();
+    public ListServlet() {
         // TODO Auto-generated constructor stub
     }
 
@@ -33,8 +33,7 @@ public class listServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		usuariodao1 = new UsuarioDao1();
+		chocolatedao = new ChocolateDAO();
 	}
 
 	/**
@@ -42,13 +41,6 @@ public class listServlet extends HttpServlet {
 	 */
 	public void destroy() {
 		// TODO Auto-generated method stub
-	}
-	
-	private void listUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
-		List<Usuario> listUser = usuariodao1.selectAllUsers();
-		request.setAttribute("listUser", listUser);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
-		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -58,7 +50,13 @@ public class listServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
+	
+	private void listChocolate(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException{
+			List <Chocolate> listChocolate = chocolatedao.selectAllChocos();
+			request.setAttribute("listUser", listChocolate);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
+	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
