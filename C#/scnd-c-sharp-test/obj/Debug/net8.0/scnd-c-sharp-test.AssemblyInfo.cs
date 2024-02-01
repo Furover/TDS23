@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("scnd-c-sharp-test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ee68974ee0b5887c4fe1ff989a489787eadfae3")]
 [assembly: System.Reflection.AssemblyProductAttribute("scnd-c-sharp-test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("scnd-c-sharp-test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
