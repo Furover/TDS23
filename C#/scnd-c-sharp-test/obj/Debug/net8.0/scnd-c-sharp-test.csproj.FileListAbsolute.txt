@@ -1,0 +1,15 @@
+/home/melanie/TDS23/C#/scnd-c-sharp-test/bin/Debug/net8.0/scnd-c-sharp-test
+/home/melanie/TDS23/C#/scnd-c-sharp-test/bin/Debug/net8.0/scnd-c-sharp-test.deps.json
+/home/melanie/TDS23/C#/scnd-c-sharp-test/bin/Debug/net8.0/scnd-c-sharp-test.runtimeconfig.json
+/home/melanie/TDS23/C#/scnd-c-sharp-test/bin/Debug/net8.0/scnd-c-sharp-test.dll
+/home/melanie/TDS23/C#/scnd-c-sharp-test/bin/Debug/net8.0/scnd-c-sharp-test.pdb
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.GeneratedMSBuildEditorConfig.editorconfig
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.AssemblyInfoInputs.cache
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.AssemblyInfo.cs
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.csproj.CoreCompileInputs.cache
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.sourcelink.json
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.dll
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/refint/scnd-c-sharp-test.dll
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.pdb
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/scnd-c-sharp-test.genruntimeconfig.cache
+/home/melanie/TDS23/C#/scnd-c-sharp-test/obj/Debug/net8.0/ref/scnd-c-sharp-test.dll
