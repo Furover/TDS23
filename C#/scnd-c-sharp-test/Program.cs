@@ -5,7 +5,6 @@
 
         static void Main(string[] args)
         {
-            Console.WriteLine("oi");
             StudentData student1, student2;
 
             student1 = new StudentData();
