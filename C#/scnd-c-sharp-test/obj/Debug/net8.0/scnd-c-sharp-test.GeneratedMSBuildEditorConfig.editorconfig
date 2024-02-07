@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = scnd_c_sharp_test
-build_property.ProjectDir = /home/melanie/TDS23/C#/scnd-c-sharp-test/
+build_property.ProjectDir = C:\Users\mateu\Source\Repos\Furover\TDS23\C#\scnd-c-sharp-test\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
