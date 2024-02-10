@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ASP_NET_CORE_MVC_test.Models.Department>
+@{
+    ViewData["PageTitle"] = "Departments page";
+}
+<p>
+    <h2>@ViewData["PageTitle"]</h2>
+</p>
+
+<table class="table" >
+    <thead>
+        <tr>
+                @Html.DisplayNameFor(Model => Model.Name)
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayName(item.Name)
+                </td>
+            </tr>
+        }
+</tbody>
+</table>
